@@ -41,7 +41,7 @@ resource "random_id" "w" {
 
 locals {
     # Generates cluster_id as combination of cluster_id_prefix + (random_id or user-defined cluster_id)
-    cluster_id  = var.cluster_id == "" ? random_id.label[0].hex : "${var.cluster_id_prefix}-${var.cluster_id}"
+    cluster_id  = var.cluster_id == "" ? random_id.label[0].hex : (var.cluster_id_prefix == "" ? var.cluster_id : "${var.cluster_id_prefix}-${var.cluster_id}")
 
     bootstrap = {
         ip      = cidrhost(var.network_cidr, 3)

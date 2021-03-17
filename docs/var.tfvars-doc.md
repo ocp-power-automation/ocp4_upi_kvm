@@ -96,6 +96,7 @@ cluster_id                         = ""
 ```
 The `cluster_id_prefix` should not be more than 8 characters. Nodes are pre-fixed with this value.
 Default value is `test-ocp`
+If `cluster_id_prefix` is not set, the `cluster_id` will be used only without prefix.
 
 A random value will be used for `cluster_id` if not set.
 The total length of `cluster_id_prefix`.`cluster_id` should not exceed 14 characters.

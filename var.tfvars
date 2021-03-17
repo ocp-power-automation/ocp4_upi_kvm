@@ -29,8 +29,8 @@ openshift_install_tarball          = "https://mirror.openshift.com/pub/openshift
 openshift_client_tarball           = "https://mirror.openshift.com/pub/openshift-v4/ppc64le/clients/ocp-dev-preview/latest/openshift-client-linux.tar.gz"
 pull_secret_file                   = "data/pull-secret.txt"
 cluster_domain                     = "ibm.com"
-cluster_id_prefix                  = "test-ocp"
-cluster_id                         = ""
+cluster_id_prefix                  = "test-ocp" # Set it to empty if just want to use cluster_id without prefix
+cluster_id                         = ""         # It will use random generated id with cluster_id_prefix if this is not set
 
 
 ### Misc Customizations
